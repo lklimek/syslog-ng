@@ -38,7 +38,7 @@ Build-Depends: debhelper (>= 9~),
                libxml2-utils, geoip-database,
                libcurl4-openssl-dev,
                libmaxminddb-dev,
-               openjdk-7-jdk | openjdk-8-jdk,
+               openjdk-7-jdk-headless | openjdk-8-jdk-headless,
                gradle (>=2.2.1)
 Build-Conflicts: autoconf2.13
 Standards-Version: 3.9.8
@@ -654,7 +654,7 @@ Description: Enhanced system logging daemon (getent)
 Package: syslog-ng-mod-java
 Architecture: any
 Multi-Arch: foreign
-Depends: syslog-ng-core (= ${binary:Version}), default-jre
+Depends: syslog-ng-core (= ${binary:Version}), java8-runtime-headless
 Recommends: syslog-ng-mod-java-common-lib
 Description: Enhanced system logging daemon (Java destination)
  syslog-ng is an enhanced log daemon, supporting a wide range of input
